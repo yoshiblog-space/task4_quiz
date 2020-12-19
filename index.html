@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Quiz</title>
+  <style>
+    #sentence{
+      border-top: solid 2px silver;
+      border-bottom: solid 2px silver;
+      line-height: 2em;
+      margin:20px 0;
+    }
+    h3{
+      margin:0;
+    }
+    .btn{
+      margin-top: 5px;
+      display: block;
+    }
+    .nondisplay{
+      display: none;
+    }
+  </style>
+</head>
+<body id='body'>
+  <h1 id="status">ようこそ</h1>
+  <div id="property">
+    <h3 id="category"></h3>
+    <h3 id="difficulty"></h3>
+  </div>
+  <div id="sentence">以下のボタンをクリック</div>
+  <button id="start">開始</button>
+  <div id="answer"></div>
+  <script src="js/main.js"></script>
+</body>
+</html>
