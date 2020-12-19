@@ -6,8 +6,6 @@
   const quizTitle = document.getElementById('status');
   const quizSentence = document.getElementById('sentence');
   const startButton = document.getElementById('start');
-  // const quizCategory = document.getElementById('category');
-  // const quizDifficulty = document.getElementById('difficulty');
   const quizProperty =document.getElementById('property');
   const ansButton = document.getElementById('answer');
   let quizProbrems =[];
@@ -40,10 +38,10 @@
     if(correctAns === selectAns){
       numRight++;
       numProbrem++;
-      quizDisplay(numProbrem,quizProbrems)      
+      quizDisplay(numProbrem,quizProbrems);
     }else{
       numProbrem++;
-      quizDisplay(numProbrem,quizProbrems)
+      quizDisplay(numProbrem,quizProbrems);
     }
   }
 
