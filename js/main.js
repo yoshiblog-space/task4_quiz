@@ -47,9 +47,7 @@
 
   //回答表示設定
   const ansSet = (quizProbrem) => {
-    console.log(quizProbrem);
     const correctAns = quizProbrem.correct_answer;
-    console.log(correctAns);
     //回答を一旦配列へ
     ansData[0] = quizProbrem.correct_answer;
     quizProbrem.incorrect_answers.forEach((incorrectans,idx) => {
@@ -57,7 +55,6 @@
     });
 
     //truefalseと選択式の回答表示を設定
-
     const ansBoolean = ansData[0] === 'True' || ansData[0] === 'False';
     if(ansBoolean){
       const trueBtn = document.createElement('button');
@@ -80,7 +77,6 @@
       ansButton.appendChild(falseBtn);
     }else{
       //選択式はシャッフル設定
-
       for(let i = ansData.length; i > 0 ; i--){
         const selectBtn = document.createElement('button');
         selectBtn.classList.add('btn');
@@ -89,12 +85,10 @@
           selectAns = selectBtn.textContent;
           checkAns(selectAns, correctAns);
         });
-
         ansButton.appendChild(selectBtn);
       }
     }
   };
-
 
   //問題表示設定
   const quizDisplay = ((numProbrem,quizProbrems) => {
@@ -104,7 +98,6 @@
     while (ansButton.firstChild){
       ansButton.removeChild(ansButton.firstChild);
     }
-
 
     if(numProbrem === quizProbrems.length){
       endDisplay();
@@ -149,7 +142,5 @@
       });
 
     waitDisplay();
- 
   });
-
 }
